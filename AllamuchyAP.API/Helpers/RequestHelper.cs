@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace AllamuchyAP.Data.Helpers
+namespace AllamuchyAP.API.Helpers
 {
     public partial class RequestHelper
     {
@@ -15,6 +15,19 @@ namespace AllamuchyAP.Data.Helpers
         public static async Task<ResponseData> GetModelsForYearByMakeId(int year, int makeId)
         {
             string url = $"https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/{makeId}/modelyear/{year}?format=json";
+
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+            var streamTask = client.GetStreamAsync(url);
+
+            var models = await JsonSerializer.DeserializeAsync<ResponseData>(await streamTask);
+
+            return models;
+        }
+
+        public static async Task<ResponseData> GetModelsForYearByMakeNamePassengerCar(int year, string makeName)
+        {
+            string url = $"https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeYear/make/{makeName}/modelyear/{year}/vehicletype/Passenger Car?format=json";
 
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 

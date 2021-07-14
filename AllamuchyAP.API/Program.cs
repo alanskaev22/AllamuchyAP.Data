@@ -1,12 +1,12 @@
-﻿using AllamuchyAP.Data.Helpers;
+﻿using AllamuchyAP.API.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static AllamuchyAP.Data.Helpers.RequestHelper;
+using static AllamuchyAP.API.Helpers.RequestHelper;
 
-namespace AllamuchyAP.Data
+namespace AllamuchyAP.API
 {
     public partial class Program
     {
@@ -19,7 +19,9 @@ namespace AllamuchyAP.Data
 
             validAutoYears.ForEach(year => 
                 {
-                    var response = RequestHelper.GetModelsForYearByMakeId(year, 449).Result;
+                    //var response = GetModelsForYearByMakeId(year, 449).Result;
+                    var response = GetModelsForYearByMakeNamePassengerCar(year, "Bentley").Result;
+
                     allModelsForYearRange.AddRange((from result in response.Results
                                         select new CarModel()
                                         {
@@ -27,7 +29,9 @@ namespace AllamuchyAP.Data
                                             MakeName = result.Make_Name,
                                             ModelId = result.Model_ID,
                                             ModelName = result.Model_Name,
-                                            ModelYear = year
+                                            ModelYear = year,
+                                            VehicleTypeId = result.VehicleTypeId,
+                                            VehicleTypeName = result.VehicleTypeName
                                         }).ToList());
                 }
             );
