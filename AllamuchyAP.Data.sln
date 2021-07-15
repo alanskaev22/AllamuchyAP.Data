@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllamuchyAP", "AllamuchyAP\AllamuchyAP.csproj", "{8AFE2734-C743-48CC-9E20-803EE8422E82}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllamuchyAP.DataAccess", "AllamuchyAP.DataAccess\AllamuchyAP.DataAccess.csproj", "{821BC738-57C3-42AF-8673-A3668A08931F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllamuchyAP.DataAccess", "AllamuchyAP.DataAccess\AllamuchyAP.DataAccess.csproj", "{821BC738-57C3-42AF-8673-A3668A08931F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllamuchyAP.API", "AllamuchyAP.API\AllamuchyAP.API.csproj", "{FF1AC2A1-89E4-4594-8F25-CC400395E6D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllamuchyAP.WebAPI", "AllamuchyAP.WebAPI\AllamuchyAP.WebAPI.csproj", "{91CEB707-074E-4F1D-9BC6-C56DEC7D353B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllamuchyAP.WebAPI", "AllamuchyAP.WebAPI\AllamuchyAP.WebAPI.csproj", "{91CEB707-074E-4F1D-9BC6-C56DEC7D353B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8AFE2734-C743-48CC-9E20-803EE8422E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AFE2734-C743-48CC-9E20-803EE8422E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AFE2734-C743-48CC-9E20-803EE8422E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AFE2734-C743-48CC-9E20-803EE8422E82}.Release|Any CPU.Build.0 = Release|Any CPU
 		{821BC738-57C3-42AF-8673-A3668A08931F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{821BC738-57C3-42AF-8673-A3668A08931F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{821BC738-57C3-42AF-8673-A3668A08931F}.Release|Any CPU.ActiveCfg = Release|Any CPU
