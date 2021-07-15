@@ -13,4 +13,9 @@
     <Folder Include="Models\Database\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AllamuchyAP.DataAccess\AllamuchyAP.DataAccess.csproj" />
+    <ProjectReference Include="..\AllamuchyAP\AllamuchyAP.csproj" />
+  </ItemGroup>
+
 </Project>
